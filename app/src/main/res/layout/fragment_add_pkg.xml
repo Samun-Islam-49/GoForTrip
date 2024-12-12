@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.AddPkgFragment">
+
+
+            <ImageView
+                android:id="@+id/pkg_icon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_name"
+                app:layout_constraintDimensionRatio="h,16:9"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_name"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/pkg_name"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:srcCompat="@drawable/ic_baseline_account_box" />
+
+            <EditText
+                android:id="@+id/pkg_name"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textColorHint="@color/Gray"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/et_bg"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/enter_package_name"
+                android:inputType="textPersonName"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/nestedScrollView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_icon" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView2"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_schedule"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_name"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_name">
+
+                <EditText
+                    android:id="@+id/pkg_addr"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textColorHint="@color/Gray"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_address"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+            </androidx.core.widget.NestedScrollView>
+
+
+            <TextView
+                android:id="@+id/pkg_schedule"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textColorHint="@color/Gray"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:gravity="center"
+                android:text="Select Departure Schedule"
+                android:textColor="#9E9E9E"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/nestedScrollView3"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_name"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_name"
+                app:layout_constraintTop_toBottomOf="@+id/nestedScrollView2" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView3"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_price"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_schedule"
+                app:layout_constraintStart_toStartOf="@+id/pkg_schedule"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_schedule">
+
+                <EditText
+                    android:id="@+id/pkg_dep_loc"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textColorHint="@color/Gray"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:paddingTop="8dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_departure_location"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </androidx.core.widget.NestedScrollView>
+
+
+            <EditText
+                android:id="@+id/pkg_price"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textColorHint="@color/Gray"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/enter_price"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_total_seat"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_schedule"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_schedule"
+                app:layout_constraintTop_toBottomOf="@+id/nestedScrollView3" />
+
+            <EditText
+                android:id="@+id/pkg_total_seat"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:textColorHint="@color/Gray"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/et_bg"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/total_seat"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_image_select_rec"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_price"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_price"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_price" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/pkg_image_select_rec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/select_image_btn"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_total_seat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_total_seat"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_total_seat"
+                tools:visibility="visible" />
+
+            <Button
+                android:id="@+id/select_image_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/teal_700"
+                android:elevation="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/add_image"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/nestedScrollView"
+                app:layout_constraintEnd_toEndOf="@+id/pkg_total_seat"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/pkg_total_seat"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_image_select_rec" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/et_bg"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_submit_btn"
+                app:layout_constraintEnd_toEndOf="@+id/select_image_btn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/select_image_btn"
+                app:layout_constraintTop_toBottomOf="@+id/select_image_btn">
+
+                <EditText
+                    android:id="@+id/pkg_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/Gray"
+                    android:ems="10"
+                    android:gravity="top|start"
+                    android:hint="@string/enter_package_description"
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:background="@android:color/transparent"/>
+            </androidx.core.widget.NestedScrollView>
+
+            <Button
+                android:id="@+id/pkg_submit_btn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/teal_700"
+                android:elevation="10dp"
+                android:paddingTop="8dp"
+                android:text="@string/add_package"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/nestedScrollView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/nestedScrollView"
+                app:layout_constraintTop_toBottomOf="@+id/nestedScrollView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>

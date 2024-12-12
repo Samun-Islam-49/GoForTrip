@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="@color/white"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/white"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bk_list_user_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="@+id/bk_list_pkg_info"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside"
+                app:layout_constraintVertical_weight="6">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/bk_list_user_icon"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/ic_baseline_account_box"
+                    app:layout_constraintBottom_toTopOf="@+id/bk_list_user_name"
+                    app:layout_constraintEnd_toEndOf="@+id/bk_list_user_name"
+                    app:layout_constraintStart_toStartOf="@+id/bk_list_user_name"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    app:shapeAppearanceOverlay="@style/ShapeableImageView" />
+
+                <TextView
+                    android:id="@+id/bk_list_user_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/bk_list_user_email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/bk_list_user_icon"
+                    tools:text="Sadia Jannat" />
+
+                <TextView
+                    android:id="@+id/bk_list_user_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="marquee"
+                    android:fadingEdge="horizontal"
+                    android:gravity="center"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/bk_list_user_phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/bk_list_email"
+                    app:layout_constraintTop_toBottomOf="@+id/bk_list_user_name"
+                    tools:text="SadiaJannta@gmail.com" />
+
+                <TextView
+                    android:id="@+id/bk_list_user_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/bk_list_phone"
+                    app:layout_constraintTop_toBottomOf="@+id/bk_list_user_email"
+                    tools:text="01712547896" />
+
+                <ImageView
+                    android:id="@+id/bk_list_email"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/ic_email"
+                    app:layout_constraintBottom_toBottomOf="@+id/bk_list_user_email"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/bk_list_user_email"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/bk_list_user_email" />
+
+                <ImageView
+                    android:id="@+id/bk_list_phone"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:src="@drawable/phone"
+                    app:layout_constraintBottom_toBottomOf="@+id/bk_list_user_phone"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@+id/bk_list_user_phone"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/bk_list_user_phone" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bk_list_pkg_info"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:layout_constraintVertical_weight="4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bk_list_user_info">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/book_list_lower_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/book_list_pkg_icon"
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:src="@drawable/ic_baseline_account_box"
+                        app:layout_constraintBottom_toTopOf="@+id/bk_list_pending"
+                        app:layout_constraintEnd_toStartOf="@+id/bk_list_pkg_name"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:layout_constraintVertical_chainStyle="spread_inside"
+                        app:shapeAppearanceOverlay="@style/Corner15" />
+
+                    <TextView
+                        android:id="@+id/bk_list_total_pass"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:gravity="center_vertical|start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/bk_list_total_price"
+                        app:layout_constraintEnd_toEndOf="@+id/bk_list_pkg_name"
+                        app:layout_constraintStart_toStartOf="@+id/bk_list_pkg_name"
+                        app:layout_constraintTop_toBottomOf="@+id/bk_list_pkg_name"
+                        tools:text="Passengers : 4" />
+
+                    <TextView
+                        android:id="@+id/bk_list_total_price"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:gravity="center_vertical|start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/bk_list_trans_id"
+                        app:layout_constraintEnd_toEndOf="@+id/bk_list_total_pass"
+                        app:layout_constraintStart_toStartOf="@+id/bk_list_total_pass"
+                        app:layout_constraintTop_toBottomOf="@+id/bk_list_total_pass"
+                        tools:text="Price : 1000 tk" />
+
+                    <TextView
+                        android:id="@+id/bk_list_trans_id"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:gravity="center_vertical|start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/book_list_pkg_icon"
+                        app:layout_constraintEnd_toEndOf="@+id/bk_list_total_price"
+                        app:layout_constraintStart_toStartOf="@+id/bk_list_total_price"
+                        app:layout_constraintTop_toBottomOf="@+id/bk_list_total_price"
+                        tools:text="Trans ID : 6876464YHSGDS" />
+
+                    <TextView
+                        android:id="@+id/bk_list_pkg_name"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:ellipsize="marquee"
+                        android:fadingEdge="horizontal"
+                        android:gravity="center_vertical|start"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintBottom_toTopOf="@+id/bk_list_total_pass"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/book_list_pkg_icon"
+                        app:layout_constraintTop_toTopOf="@+id/book_list_pkg_icon"
+                        app:layout_constraintVertical_bias="0.00999999"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="Place Name" />
+
+
+                    <LinearLayout
+                        android:id="@+id/bk_list_pending"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/book_list_pkg_icon">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bk_list_confirm_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/holo_green_dark"
+                            android:text="Confirm"
+                            app:icon="@drawable/ic_check_circle_outline"
+                            app:iconGravity="textStart" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/bk_list_cancel_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@android:color/holo_red_dark"
+                            android:text="Cancel"
+                            app:icon="@drawable/ic_cancel"
+                            app:iconGravity="textStart" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/bk_list_confirmed"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="@+id/bk_list_pending"
+                        app:layout_constraintEnd_toEndOf="@+id/bk_list_pending"
+                        app:layout_constraintStart_toStartOf="@+id/bk_list_pending"
+                        app:layout_constraintTop_toTopOf="@+id/bk_list_pending">
+
+                        <ImageView
+                            android:id="@+id/pen_status_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_check_circle_outline" />
+
+                        <TextView
+                            android:id="@+id/pen_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:gravity="center"
+                            android:paddingTop="4dp"
+                            android:text="Confirmed"
+                            android:textColor="#669900"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

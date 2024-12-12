@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/teal_200"
+        tools:context=".activities.SplashActivity">
+
+
+        <TextView
+            android:id="@+id/go_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fasterone_regular"
+            android:gravity="center"
+            android:text="@string/go"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bus_image"
+            app:layout_constraintEnd_toStartOf="@+id/trip_txt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bus_image"
+            app:layout_constraintTop_toTopOf="@+id/bus_image"
+            app:layout_constraintVertical_bias="0.529"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/bus_image"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_bus"
+            app:layout_constraintBottom_toTopOf="@+id/bs_txt"
+            app:layout_constraintEnd_toStartOf="@+id/go_txt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/trip_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fasterone_regular"
+            android:gravity="center"
+            android:text="@string/trip"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bus_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/go_txt"
+            app:layout_constraintTop_toTopOf="@+id/bus_image"
+            app:layout_constraintVertical_bias="0.529"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/bs_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/goldman_bold"
+            android:text="@string/best_service"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lp_txt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/bus_image"
+            app:layout_constraintTop_toBottomOf="@+id/bus_image"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/lp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/goldman_bold"
+            android:gravity="center"
+            android:text="@string/least_price"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/bs_txt"
+            app:layout_constraintEnd_toEndOf="@+id/trip_txt"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/bs_txt"
+            app:layout_constraintTop_toTopOf="@+id/bs_txt"
+            tools:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/goto_sign_in_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/goldman_bold"
+            android:text="@string/already_have_a_account_sign_in_here"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/goto_sign_up_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/goto_sign_up_btn"
+            app:layout_constraintTop_toBottomOf="@+id/goto_sign_up_btn" />
+
+        <Button
+            android:id="@+id/goto_sign_up_btn"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/goldman_bold"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:text="@string/register_now"
+            app:layout_constraintBottom_toTopOf="@+id/goto_sign_in_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bs_txt"
+            app:layout_constraintVertical_bias="0.80"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

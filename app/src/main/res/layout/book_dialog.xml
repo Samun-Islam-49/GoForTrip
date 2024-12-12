@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/diag_total_price_tv"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:fontFamily="@font/goldman_bold"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/diag_total_price_tv_default"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/s_diag_back_btn"
+            app:layout_constraintEnd_toEndOf="@+id/s_diag_et"
+            app:layout_constraintStart_toStartOf="@+id/s_diag_et"
+            app:layout_constraintTop_toBottomOf="@+id/s_diag_et" />
+
+        <EditText
+            android:id="@+id/s_diag_et"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:autofillHints=""
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:fontFamily="@font/goldman_bold"
+            android:gravity="center"
+            android:hint="@string/amount_of_passenger"
+            android:inputType="numberDecimal"
+            android:maxLength="5"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/Gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/diag_total_price_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/s_diag_main_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/teal_700"
+            android:fontFamily="@font/goldman_bold"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="@+id/s_diag_back_btn"
+            app:layout_constraintEnd_toStartOf="@+id/s_diag_back_btn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/s_diag_back_btn" />
+
+        <Button
+            android:id="@+id/s_diag_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/teal_700"
+            android:fontFamily="@font/goldman_bold"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/s_diag_main_btn"
+            app:layout_constraintTop_toBottomOf="@+id/diag_total_price_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
+
+

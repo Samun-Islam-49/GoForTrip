@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            tools:context=".fragments.PkgDetailsFragment">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pkg_det_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_det_header_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <ImageView
+                    android:id="@+id/pkg_det_icon"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_account_box"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pkg_det_price_text"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/pkg_det_name"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_addr"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_price"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_price_text"
+                    app:layout_constraintTop_toTopOf="@+id/pkg_det_icon"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:layout_constraintVertical_chainStyle="spread_inside"
+                    tools:text="Sun Valley" />
+
+                <TextView
+                    android:id="@+id/pkg_det_addr"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#99000000"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_price_text"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_price"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_price_text"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_name"
+                    tools:text="Tanore , Rajshahi" />
+
+                <TextView
+                    android:id="@+id/pkg_det_price_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/price"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pkg_det_icon"
+                    app:layout_constraintEnd_toStartOf="@+id/pkg_det_price"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_icon"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_addr" />
+
+                <TextView
+                    android:id="@+id/pkg_det_price"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColor="#008E00"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pkg_det_price_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_price_text"
+                    app:layout_constraintTop_toTopOf="@+id/pkg_det_price_text"
+                    tools:text="150 tk" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pkg_det_header_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_det_book_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_det_header"
+                app:layout_constraintVertical_bias="0.19">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_ret_txt"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_ret_txt"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_ret_txt"
+                    app:layout_constraintTop_toTopOf="@+id/view"
+                    app:layout_constraintVertical_chainStyle="packed">
+
+                    <TextView
+                        android:id="@+id/pkg_det_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.5"
+                        tools:text="0.0" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/pkg_det_ret_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/total_ratings"
+                    android:textColor="#A8000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view"
+                    app:layout_constraintEnd_toStartOf="@+id/view"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+                <TextView
+                    android:id="@+id/pkg_det_booking"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_booking_txt"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_booking_txt"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_ret_txt"
+                    app:layout_constraintTop_toTopOf="@+id/view2"
+                    tools:text="0" />
+
+                <TextView
+                    android:id="@+id/pkg_det_booking_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/total_bookings"
+                    android:textColor="#A8000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view2"
+                    app:layout_constraintEnd_toStartOf="@+id/view2"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_booking" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="#A8000000"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/pkg_det_booking_txt"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_ret_txt"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="#A8000000"
+                    app:layout_constraintBottom_toBottomOf="@+id/view"
+                    app:layout_constraintEnd_toStartOf="@+id/pkg_det_seat_left_txt"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_booking_txt"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
+
+                <TextView
+                    android:id="@+id/pkg_det_seat_left"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_seat_left_txt"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_seat_left_txt"
+                    app:layout_constraintStart_toEndOf="@+id/pkg_det_booking_txt"
+                    app:layout_constraintTop_toTopOf="@+id/view2"
+                    tools:text="18" />
+
+                <TextView
+                    android:id="@+id/pkg_det_seat_left_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/seat_left"
+                    android:textColor="#A8000000"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_seat_left" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/pkg_det_book_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#049F04"
+                android:text="@string/book_now"
+                app:icon="@drawable/ic_bookmark"
+                app:iconGravity="textStart"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_det_header_2"
+                app:layout_constraintVertical_bias="0.285" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_det_upper_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_det_book_btn" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pkg_det_upper_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/pkg_det_lower_body"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerView"
+                app:layout_constraintVertical_bias="0.73">
+
+                <TextView
+                    android:id="@+id/pkg_det_desc_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:drawableTint="@color/black"
+                    android:text="@string/about_this_package"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_arrow_forward"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_desc"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_desc"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_desc"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pkg_det_desc_expand_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/expand_btn_bg"
+                    android:text="@string/click_here_to_expand"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/pkg_det_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_desc_2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_desc_txt"
+                    tools:text="Description here ...." />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/pkg_det_desc_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_desc"
+                    tools:visibility="visible">
+
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#A8000000"
+                        app:layout_constraintBottom_toBottomOf="@+id/pkg_det_dep_location_txt"
+                        app:layout_constraintEnd_toStartOf="@+id/pkg_det_dest"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/pkg_det_dep_location"
+                        app:layout_constraintTop_toTopOf="@+id/pkg_det_dep_location" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="32dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="#A8000000"
+                        app:layout_constraintBottom_toBottomOf="@+id/pkg_det_dep_time_txt"
+                        app:layout_constraintEnd_toStartOf="@+id/view6"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/view5"
+                        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#A8000000"
+                        app:layout_constraintBottom_toTopOf="@+id/pkg_det_dep_time"
+                        app:layout_constraintEnd_toStartOf="@+id/view4"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pkg_det_dep_location_txt" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="#A8000000"
+                        app:layout_constraintBottom_toBottomOf="@+id/view5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/view4"
+                        app:layout_constraintTop_toTopOf="@+id/view5" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dep_location"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/pkg_det_dep_location_txt"
+                        app:layout_constraintEnd_toStartOf="@+id/view3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="Tanore" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dep_location_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:text="@string/departure_location"
+                        android:textColor="#A8000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@+id/view5"
+                        app:layout_constraintEnd_toEndOf="@+id/pkg_det_dep_location"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_dep_location"
+                        app:layout_constraintTop_toBottomOf="@+id/pkg_det_dep_location" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/pkg_det_dest_txt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="@+id/view3"
+                        app:layout_constraintVertical_chainStyle="packed"
+                        tools:text="Sun Valley" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dest_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/destination"
+                        android:textColor="#A8000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view3"
+                        app:layout_constraintEnd_toEndOf="@+id/pkg_det_dest"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_dest"
+                        app:layout_constraintTop_toBottomOf="@+id/pkg_det_dest" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dep_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/pkg_det_dep_time_txt"
+                        app:layout_constraintEnd_toEndOf="@+id/pkg_det_dep_location_txt"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_dep_location_txt"
+                        app:layout_constraintTop_toBottomOf="@+id/view5"
+                        tools:text="31 jan , 2021  9.00 am" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_dep_time_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="48dp"
+                        android:gravity="center"
+                        android:text="@string/departure_time"
+                        android:textColor="#A8000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/pkg_det_dep_time"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_dep_time"
+                        app:layout_constraintTop_toBottomOf="@+id/pkg_det_dep_time" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_seat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toTopOf="@+id/pkg_det_seat_txt"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_dest_txt"
+                        app:layout_constraintTop_toTopOf="@+id/view4"
+                        tools:text="52" />
+
+                    <TextView
+                        android:id="@+id/pkg_det_seat_txt"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"
+                        android:text="@string/total_seat"
+                        android:textColor="#A8000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/view4"
+                        app:layout_constraintEnd_toEndOf="@+id/pkg_det_seat"
+                        app:layout_constraintStart_toStartOf="@+id/pkg_det_seat"
+                        app:layout_constraintTop_toBottomOf="@+id/pkg_det_seat" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/pkg_det_lower_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pkg_det_upper_body"
+                app:layout_constraintVertical_bias="1.0">
+
+                <TextView
+                    android:id="@+id/pkg_det_rev_txt"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:drawableTint="@color/black"
+                    android:text="@string/review_and_ratings"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:drawableEndCompat="@drawable/ic_arrow_forward"
+                    app:layout_constraintBottom_toTopOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.90999997"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/pkg_det_rev_expand_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/expand_btn_bg"
+                    android:text="@string/click_here_to_expand"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintEnd_toEndOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/pkg_det_pie_chart_liner"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_rev_txt"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <LinearLayout
+                    android:id="@+id/pkg_det_pie_chart_liner"
+                    android:layout_width="0dp"
+                    android:layout_height="250dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pkg_det_rev_txt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</layout>

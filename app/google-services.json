@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "995346838175",
+    "project_id": "go-for-trip",
+    "storage_bucket": "go-for-trip.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995346838175:android:227736c6b4cd6fbc8228aa",
+        "android_client_info": {
+          "package_name": "com.samun.gofortrip"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995346838175-6alipmuqm5bj9u49cfrk42uqj7qvlemt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjXoAwCiWYFLx7KH-GinPK95YFij_uyic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995346838175-6alipmuqm5bj9u49cfrk42uqj7qvlemt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

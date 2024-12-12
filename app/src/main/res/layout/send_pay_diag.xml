@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:backgroundTint="@color/white"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:backgroundTint="@color/white"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/send_pay_diag_header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            tools:text="Send 12000 tk to this number."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/send_pay_diag_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/send_pay_diag_number"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_bg"
+            android:drawableTint="@color/black"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="01790162307"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_copy"
+            app:layout_constraintBottom_toTopOf="@+id/send_pay_diag_tv"
+            app:layout_constraintEnd_toEndOf="@+id/send_pay_diag_header"
+            app:layout_constraintStart_toStartOf="@+id/send_pay_diag_header"
+            app:layout_constraintTop_toBottomOf="@+id/send_pay_diag_header" />
+
+        <TextView
+            android:id="@+id/send_pay_diag_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="And paste Transaction ID bellow."
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/send_pay_diag_trans_id_et"
+            app:layout_constraintEnd_toEndOf="@+id/send_pay_diag_number"
+            app:layout_constraintStart_toStartOf="@+id/send_pay_diag_number"
+            app:layout_constraintTop_toBottomOf="@+id/send_pay_diag_number" />
+
+        <EditText
+            android:id="@+id/send_pay_diag_trans_id_et"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/et_bg"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="Paste Transaction ID here ..."
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/send_pay_diag_book_btn"
+            app:layout_constraintEnd_toEndOf="@+id/send_pay_diag_tv"
+            app:layout_constraintStart_toStartOf="@+id/send_pay_diag_tv"
+            app:layout_constraintTop_toBottomOf="@+id/send_pay_diag_tv" />
+
+        <Button
+            android:id="@+id/send_pay_diag_book_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="book"
+            app:icon="@drawable/ic_bookmark"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/send_pay_diag_trans_id_et"
+            app:layout_constraintStart_toStartOf="@+id/send_pay_diag_trans_id_et"
+            app:layout_constraintTop_toBottomOf="@+id/send_pay_diag_trans_id_et" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
